@@ -33,11 +33,11 @@
         "_common": 
 		{
             "name": "Using the Java IBM Integration API - ACEv11 strategic classes",
-            "shortDescription": "Learn how to use the ACEv11 Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes.",
+            "shortDescription": "Learn how to use the ACEv11 Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes (requires v11.0.0.5 or higher).",
 			"durationText": "This tutorial takes approximately",
             "durationTime": "10 minutes",
             "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
-            "resourceToOpen": "MainFlow",
+            "resourceToOpen": "MainJava",
             "helpLink": 
 			{
                 "text": "IBM Knowledge Center",
@@ -162,6 +162,23 @@
                     			},
 								{
                       				"details":"Inspect the provided java application. Switch to the Java perspective and then open <span class='application'>ExampleACEV11AdminProgram.java</span> which you will find inside the Java project named <span class='application'>ExampleACEV11AdminProgram</span>. If required by your runtime environment, update the values of the two variables, <span class='resource'>nodeHostName</span> and <span class='resource'>nodePortNumber</span> which enable the Java program to communicate with your integration node. Have a look through the rest of the Java."									
+								},
+								{
+									"details":"Check the Java Build Path for the provided java application. Right-click the project <span class='application'>ExampleACEV11AdminProgram</span>, select <span class='application'>Properties</span> and choose the Java Build Path. You will see that the project has been configured to expect several jar files to be available from the default installation location on Windows at <span class='resource'>C:\\Program Files\\IBM\\ACE\\11.0.0.5</span>. If you are using a different platform or install location you will need to use the <span class='resource'>Remove</span> and <span class='resource'>Add External JARs</span> buttons to satisfy the required dependencies. The precise versions of these files may change in future, but at ACEv11.0.0.5 the required libraries are as follows:",									
+									"substeps":{
+                                 "type":"unordered",
+                                 "details":[
+                                    {
+                                       "details":"From <code>C:\\Program Files\\IBM\\ACE\\11.0.0.5\\common\\classes</code>: IntegrationAPI.jar"
+									},
+                                    {
+                                       "details":"From <code>C:\\Program Files\\IBM\\ACE\\11.0.0.5\\common\\jackson\\lib</code>: jackson-annotations-2.9.8.jar, jackson-core-2.9.8.jar, jackson-databind-2.9.8.jar, jackson-dataformat-yaml-2.9.8.jar, snakeyaml-1.23.jar"
+                                    },
+                                    {
+                                       "details":"From <code>C:\\Program Files\\IBM\\ACE\\11.0.0.5\\common\\jnr\\lib</code>: asm-7.0.jar, jffi-1.2.19.jar, jffi-1.2.19-native.jar, jnr-a64asm-1.0.0.jar, jnr-constants-0.9.12.jar, jnr-enxio-0.21.jar, jnr-ffi-2.1.10.jar, jnr-posix-3.0.50.jar, jnr-unixsocket-0.23.jar, jnr-x86asm-1.0.2.jar"
+                                    }
+                                 ]
+                              }
 								}
                         ]
                      }
