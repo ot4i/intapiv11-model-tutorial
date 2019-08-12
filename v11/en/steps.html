@@ -52,7 +52,7 @@
 	<hr>
 	<div class="row">
 		<div class="small-10 medium-10 large-10 columns">
-		<h5> Learn how to use the ACEv11 Java IBM Integration API&#39;s strategic com.ibm.integration.admin.proxy.* classes. </h5>
+		<h5> Learn how to use the ACEv11 Java IBM Integration API&#39;s strategic com.ibm.integration.admin.proxy.* classes (requires v11.0.0.5 or higher). </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
 			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
@@ -110,7 +110,7 @@
 					<div class="small-2 medium-2 large-2 columns">
 					
 					
-					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainFlow')"> Import <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('MainJava')"> Import <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
 										
 				    </div>
 					
@@ -139,6 +139,25 @@
 										</li>
 									
 										<li> Inspect the provided java application. Switch to the Java perspective and then open <span class="application">ExampleACEV11AdminProgram.java</span> which you will find inside the Java project named <span class="application">ExampleACEV11AdminProgram</span>. If required by your runtime environment, update the values of the two variables, <span class="resource">nodeHostName</span> and <span class="resource">nodePortNumber</span> which enable the Java program to communicate with your integration node. Have a look through the rest of the Java.
+										
+										</li>
+									
+										<li> Check the Java Build Path for the provided java application. Right-click the project <span class="application">ExampleACEV11AdminProgram</span>, select <span class="application">Properties</span> and choose the Java Build Path. You will see that the project has been configured to expect several jar files to be available from the default installation location on Windows at <span class="resource">C:\Program Files\IBM\ACE\11.0.0.5</span>. If you are using a different platform or install location you will need to use the <span class="resource">Remove</span> and <span class="resource">Add External JARs</span> buttons to satisfy the required dependencies. The precise versions of these files may change in future, but at ACEv11.0.0.5 the required libraries are as follows:
+										
+										
+											
+											<ul>
+											
+												
+													<li> From <code>C:\Program Files\IBM\ACE\11.0.0.5\common\classes</code>: IntegrationAPI.jar</li>
+												
+													<li> From <code>C:\Program Files\IBM\ACE\11.0.0.5\common\jackson\lib</code>: jackson-annotations-2.9.8.jar, jackson-core-2.9.8.jar, jackson-databind-2.9.8.jar, jackson-dataformat-yaml-2.9.8.jar, snakeyaml-1.23.jar</li>
+												
+													<li> From <code>C:\Program Files\IBM\ACE\11.0.0.5\common\jnr\lib</code>: asm-7.0.jar, jffi-1.2.19.jar, jffi-1.2.19-native.jar, jnr-a64asm-1.0.0.jar, jnr-constants-0.9.12.jar, jnr-enxio-0.21.jar, jnr-ffi-2.1.10.jar, jnr-posix-3.0.50.jar, jnr-unixsocket-0.23.jar, jnr-x86asm-1.0.2.jar</li>
+												
+											
+											</ul>
+											
 										
 										</li>
 									
