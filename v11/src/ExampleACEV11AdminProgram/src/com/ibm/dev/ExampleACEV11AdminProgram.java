@@ -99,9 +99,16 @@ public class ExampleACEV11AdminProgram {
    private static void displayMessageFlowRunstate(MessageFlowProxy thisFlow) throws IntegrationAdminException {	   
 	   boolean isRunning = thisFlow.getMessageFlowModel(true).getActive().isRunning();
 	   String messageFlowName = thisFlow.getName();
-	   String applicationName = thisFlow.getApplicationServer().getName();
-	   String serverName = thisFlow.getApplicationServer().getIntegrationServerProxy().getName();
-	   String nodeName = thisFlow.getApplicationServer().getIntegrationServerProxy().getIntegrationNodeProxy().getName();	   
+	   String applicationName = thisFlow.getApplicationProxy().getName();
+	   String serverName = thisFlow.getApplicationProxy().getIntegrationServerProxy().getName();
+	   String nodeName = thisFlow.getApplicationProxy().getIntegrationServerProxy().getIntegrationNodeProxy().getName();	   
+	   // In ACEv11.0.0.5, there was a defect whereby the method getApplicationProxy()
+	   // was incorrectly named getApplicationServer(). The following 3 lines are left commented out to 
+	   // and can be swapped for the 3 lines above this comment if you are using v11.0.0.5
+	   //
+	   // String applicationName = thisFlow.getApplicationServer().getName();
+	   // String serverName = thisFlow.getApplicationServer().getIntegrationServerProxy().getName();
+	   // String nodeName = thisFlow.getApplicationServer().getIntegrationServerProxy().getIntegrationNodeProxy().getName();
 	   if (isRunning) {
        	log(MF_INDENT+nodeName+","+serverName+","+applicationName+","+messageFlowName+" is running");        	
        } else {
