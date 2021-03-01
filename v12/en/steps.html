@@ -33,7 +33,7 @@
 		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
 	</head>
 <!-- header::End -->
-<!-- body::Start -->
+<!-- body::StartA -->
 		<body>
   	<!-- body content here -->
 	<div class="row">
@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Using the Java IBM Integration API - ACEv11 strategic classes <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
+	    <h4 class="title">Using the Java IBM Integration API - strategic classes <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -52,7 +52,7 @@
 	<hr>
 	<div class="row">
 		<div class="small-10 medium-10 large-10 columns">
-		<h5> Learn how to use the ACEv11 Java IBM Integration API&#39;s strategic com.ibm.integration.admin.proxy.* classes (requires v11.0.0.5 or higher). </h5>
+		<h5> Learn how to use the ACE Java IBM Integration API&#39;s strategic com.ibm.integration.admin.proxy.* classes </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
 			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
@@ -82,10 +82,10 @@
 					      	<h4>Import projects</h4>
 					        
 						    
-								<p> When you click Import, two projects will be created in your workspace: An application named <span class="application">ExampleApplication</span> and a Java project name <span class="application">ExampleACEV11AdminProgram</span>. </p>
+								<p> When you click Import, two projects will be created in your workspace: An application named <span class="application">ExampleApplication</span> and a Java project name <span class="application">ExampleACEAdminProgram</span>. </p>
 								
 							
-								<p> <span class="application">NOTE:</span> You may see errors with the imported <span class="application">ExampleACEV11AdminProgram</span> project, which requires some dependent jar files which it expects to find in the default installation location for ACEv11.0.0.5 on Windows. You may be on a different platform, or fix pack level, or have a system using a non-default location for the product installation. Don't be concerned - instructions are provided later on the Prepare tab to help with this. </p>
+								<p> <span class="application">NOTE:</span> You may see errors with the imported <span class="application">ExampleACEAdminProgram</span> project, which requires some dependent jar files which it expects to find in the default installation location for ACEv12.0.1.0 on Windows. You may be on a different platform, or install version, or have a system using a non-default location for the product installation. Don't be concerned - instructions are provided later on the Prepare tab to help with this. </p>
 								
 							
 								<p> <span class="application">ExampleApplication</span> provides a single message flow named <span class="resource">ExampleFlow</span>. This message flow is not important - it simply provides an HTTPInput node wired to an HTTPReply. The only purpose for providing this flow is so that when the Java program is executed, there are some deployed artifacts to report on. </p>
@@ -141,22 +141,22 @@
 										
 										</li>
 									
-										<li> Inspect the provided java application. Switch to the Java perspective and then open <span class="application">ExampleACEV11AdminProgram.java</span> which you will find inside the Java project named <span class="application">ExampleACEV11AdminProgram</span>. If required by your runtime environment, update the values of the two variables, <span class="resource">nodeHostName</span> and <span class="resource">nodePortNumber</span> which enable the Java program to communicate with your integration node. Have a look through the rest of the Java.
+										<li> Inspect the provided java application. Switch to the Java perspective and then open <span class="application">ExampleACEAdminProgram.java</span> which you will find inside the Java project named <span class="application">ExampleACEAdminProgram</span>. If required by your runtime environment, update the values of the two variables, <span class="resource">nodeHostName</span> and <span class="resource">nodePortNumber</span> which enable the Java program to communicate with your integration node. Have a look through the rest of the Java.
 										
 										</li>
 									
-										<li> Check the Java Build Path for the provided java application. Right-click the project <span class="application">ExampleACEV11AdminProgram</span>, select <span class="application">Properties</span> and choose the Java Build Path. You will see that the project has been configured to expect several jar files to be available from the default installation location on Windows at <span class="resource">C:\Program Files\IBM\ACE\11.0.0.5</span>. If you are using a different platform or install location you will need to use the <span class="resource">Remove</span> and <span class="resource">Add External JARs</span> buttons to satisfy the required dependencies. The precise versions of these files may change in future, but at ACEv11.0.0.5 the required libraries are as follows:
+										<li> Check the Java Build Path for the provided java application. Right-click the project <span class="application">ExampleACEAdminProgram</span>, select <span class="application">Properties</span> and choose the Java Build Path. You will see that the project has been configured to expect several jar files to be available from the default installation location on Windows at <span class="resource">C:\Program Files\IBM\ACE\12.0.1.0</span>. If you are using a different platform or install location you will need to use the <span class="resource">Remove</span> and <span class="resource">Add External JARs</span> buttons to satisfy the required dependencies. The precise versions of these files may change in future, but at ACEv12.0.1.0 the required libraries are as follows:
 										
 										
 											
 											<ul>
 											
 												
-													<li> From <code>C:\Program Files\IBM\ACE\11.0.0.5\common\classes</code>: IntegrationAPI.jar</li>
+													<li> From <code>C:\Program Files\IBM\ACE\12.0.1.0\common\classes</code>: IntegrationAPI.jar</li>
 												
-													<li> From <code>C:\Program Files\IBM\ACE\11.0.0.5\common\jackson\lib</code>: jackson-annotations-2.9.8.jar, jackson-core-2.9.8.jar, jackson-databind-2.9.8.jar, jackson-dataformat-yaml-2.9.8.jar, snakeyaml-1.23.jar</li>
+													<li> From <code>C:\Program Files\IBM\ACE\12.0.1.0\common\jackson\lib</code>: jackson-annotations-2.11.4.jar, jackson-core-2.11.4.jar, jackson-databind-2.11.4.jar, jackson-dataformat-yaml-2.11.4.jar, snakeyaml-1.27.jar</li>
 												
-													<li> From <code>C:\Program Files\IBM\ACE\11.0.0.5\common\jnr\lib</code>: asm-7.0.jar, jffi-1.2.19.jar, jffi-1.2.19-native.jar, jnr-a64asm-1.0.0.jar, jnr-constants-0.9.12.jar, jnr-enxio-0.21.jar, jnr-ffi-2.1.10.jar, jnr-posix-3.0.50.jar, jnr-unixsocket-0.23.jar, jnr-x86asm-1.0.2.jar</li>
+													<li> From <code>C:\Program Files\IBM\ACE\12.0.1.0\common\jnr\lib</code>: asm-7.0.jar, jffi-1.2.19.jar, jffi-1.2.19-native.jar, jnr-a64asm-1.0.0.jar, jnr-constants-0.9.12.jar, jnr-enxio-0.21.jar, jnr-ffi-2.1.10.jar, jnr-posix-3.0.50.jar, jnr-unixsocket-0.23.jar, jnr-x86asm-1.0.2.jar</li>
 												
 											
 											</ul>
@@ -196,16 +196,16 @@
 									<ol>
 									
 									
-										<li> Open <span class="resource">ExampleACEV11AdminProgram.java</span> which is located inside project <span class="resource">ExampleACEV11AdminProgram</span>.
+										<li> Open <span class="resource">ExampleACEAdminProgram.java</span> which is located inside project <span class="resource">ExampleACEAdminProgram</span>.
 										
 										
 											
 											<ul>
 											
 												
-													<li> Right-click <span class="resource">ExampleACEV11AdminProgram.java</span> and select <span class="resource">Run As > Java application</span>.</li>
+													<li> Right-click <span class="resource">ExampleACEAdminProgram.java</span> and select <span class="resource">Run As > Java application</span>.</li>
 												
-													<li> The Console view should open at the base of the screen and as the Java application runs, you should see logging like this:<br><code>(12/08/19 12:47:54) =============================================================================================</code><br><code>(12/08/19 12:47:54) This v11 admin program shows the use of com.ibm.integration.admin.proxy.* classes (STRATEGIC)</code><br><code>(12/08/19 12:47:54) =============================================================================================</code><br><code>(12/08/19 12:47:54) Connecting to host localhost and port 4414</code><br><code>(12/08/19 12:47:55) TESTNODE is running</code><br><code>(12/08/19 12:47:55)   TESTNODE,default is running</code><br><code>(12/08/19 12:47:55)     TESTNODE,default,ExampleApplication is running</code><br><code>(12/08/19 12:47:55)       TESTNODE,default,ExampleApplication,ExampleFlow is running</code></li>
+													<li> The Console view should open at the base of the screen and as the Java application runs, you should see logging like this:<br><code>(12/08/19 12:47:54) =============================================================================================</code><br><code>(12/08/19 12:47:54) This admin program shows the use of com.ibm.integration.admin.proxy.* classes (STRATEGIC)</code><br><code>(12/08/19 12:47:54) =============================================================================================</code><br><code>(12/08/19 12:47:54) Connecting to host localhost and port 4414</code><br><code>(12/08/19 12:47:55) TESTNODE is running</code><br><code>(12/08/19 12:47:55)   TESTNODE,default is running</code><br><code>(12/08/19 12:47:55)     TESTNODE,default,ExampleApplication is running</code><br><code>(12/08/19 12:47:55)       TESTNODE,default,ExampleApplication,ExampleFlow is running</code></li>
 												
 											
 											</ul>
@@ -218,7 +218,7 @@
 									
 								
 							
-								<p> This tutorial has shown how to use the ACEv11 Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes to discover details about what's deployed to an integration server. </p>
+								<p> This tutorial has shown how to use the ACE Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes to discover details about what's deployed to an integration server. </p>
 								
 							
 						</div>
