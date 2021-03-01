@@ -11,7 +11,7 @@ import com.ibm.integration.admin.proxy.IntegrationServerProxy;
 import com.ibm.integration.admin.proxy.ApplicationProxy;
 import com.ibm.integration.admin.proxy.MessageFlowProxy;
 
-public class ExampleACEV11AdminProgram {
+public class ExampleACEAdminProgram {
 
 	private final static String NODE_INDENT = "";    
     private final static String SERVER_INDENT = "  ";
@@ -20,7 +20,7 @@ public class ExampleACEV11AdminProgram {
     
    public static void main(String[] args) {
 	   log(NODE_INDENT+"=============================================================================================");
-	   log(NODE_INDENT+"This v11 admin program shows the use of com.ibm.integration.admin.proxy.* classes (STRATEGIC)");
+	   log(NODE_INDENT+"This admin program shows the use of com.ibm.integration.admin.proxy.* classes (STRATEGIC)");
 	   log(NODE_INDENT+"=============================================================================================");
 	   
 	   int nodePortNumber = 4414;
