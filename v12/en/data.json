@@ -32,8 +32,8 @@
 	{
         "_common": 
 		{
-            "name": "Using the Java IBM Integration API - strategic classes",
-            "shortDescription": "Learn how to use the ACE Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes",
+            "name": "Using the Java IBM Integration API - Strategic classes",
+            "shortDescription": "Learn how to use the Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes",
 			"durationText": "This tutorial takes approximately",
             "durationTime": "10 minutes",
             "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
