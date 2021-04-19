@@ -51,7 +51,7 @@
             "topicList": 
 			[
                 {
-                    "title": "ACE Java IBM Integration API"
+                    "title": "Java IBM Integration API"
                 }
             ],
             "outcomesName": "Learning outcomes",
@@ -65,14 +65,14 @@
             "summary": 
 			{
                 "overviewName": "OVERVIEW",
-                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the ACE concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
                 "sections": 
 				[
                     {
-                        "section": "This tutorial demonstrates a simple java application executing stand-alone (in a JVM but outside of the ACE runtime itself). The application uses the ACE Java Integration API's com.ibm.integration.admin.proxy.* classes. These classes are strategic for the ACE product so should be used when writing any new administrative Java application. Separate tutorials are provided which also showcase other packages in the API."
+                        "section": "This tutorial demonstrates a simple java application executing stand-alone (in a JVM but outside of the IBM App Connect Enterprise runtime itself). The application uses the Java Integration API's com.ibm.integration.admin.proxy.* classes. These classes are strategic for the product so should be used when writing any new administrative Java application. Separate tutorials are provided which also showcase other packages in the API."
 					},
 					{
-                        "section": "The tutorial requires an ACE integration node owned server, and provides an example application which can be deployed to the server."
+                        "section": "The tutorial requires an integration node owned server, and provides an example application which can be deployed to the server."
                     },
                     {
                         "section": "In IBM App Connect Enterprise, an application is a container for all the resources that are required to create a solution.  The Java application can then be run to report information about the deployed application."
@@ -109,7 +109,7 @@
                             "section": "When you click Import, two projects will be created in your workspace: An application named <span class='application'>ExampleApplication</span> and a Java project name <span class='application'>ExampleACEAdminProgram</span>."
                         },
 						{
-							"section": "<span class='application'>NOTE:</span> You may see errors with the imported <span class='application'>ExampleACEAdminProgram</span> project, which requires some dependent jar files which it expects to find in the default installation location for ACEv12.0.1.0 on Windows. You may be on a different platform, or install version, or have a system using a non-default location for the product installation. Don't be concerned - instructions are provided later on the Prepare tab to help with this."
+							"section": "<span class='application'>NOTE:</span> You may see errors with the imported <span class='application'>ExampleACEAdminProgram</span> project, which requires some dependent jar files which it expects to find in the default installation location for IBM App Connect Enterprise 12 on Windows. You may be on a different platform, or install version, or have a system using a non-default location for the product installation. Don't be concerned - instructions are provided later on the Prepare tab to help with this."
 						},
                         {
                             "section": "<span class='application'>ExampleApplication</span> provides a single message flow named <span class='resource'>ExampleFlow</span>. This message flow is not important - it simply provides an HTTPInput node wired to an HTTPReply. The only purpose for providing this flow is so that when the Java program is executed, there are some deployed artifacts to report on."
@@ -168,7 +168,7 @@
                       				"details":"Inspect the provided java application. Switch to the Java perspective and then open <span class='application'>ExampleACEAdminProgram.java</span> which you will find inside the Java project named <span class='application'>ExampleACEAdminProgram</span>. If required by your runtime environment, update the values of the two variables, <span class='resource'>nodeHostName</span> and <span class='resource'>nodePortNumber</span> which enable the Java program to communicate with your integration node. Have a look through the rest of the Java."									
 								},
 								{
-									"details":"Check the Java Build Path for the provided java application. Right-click the project <span class='application'>ExampleACEAdminProgram</span>, select <span class='application'>Properties</span> and choose the Java Build Path. You will see that the project has been configured to expect several jar files to be available from the default installation location on Windows at <span class='resource'>C:\\Program Files\\IBM\\ACE\\12.0.1.0</span>. If you are using a different platform or install location you will need to use the <span class='resource'>Remove</span> and <span class='resource'>Add External JARs</span> buttons to satisfy the required dependencies. The precise versions of these files may change in future, but at ACEv12.0.1.0 the required libraries are as follows:",									
+									"details":"Check the Java Build Path for the provided java application. Right-click the project <span class='application'>ExampleACEAdminProgram</span>, select <span class='application'>Properties</span> and choose the Java Build Path. You will see that the project has been configured to expect several jar files to be available from the default installation location on Windows at <span class='resource'>C:\\Program Files\\IBM\\ACE\\12.0.1.0</span>. If you are using a different platform or install location you will need to use the <span class='resource'>Remove</span> and <span class='resource'>Add External JARs</span> buttons to satisfy the required dependencies. The precise versions of these files may change in future, but at IBM App Connect Enterprise 12.0.1.0 the required libraries are as follows:",									
 									"substeps":{
                                  "type":"unordered",
                                  "details":[
@@ -225,7 +225,7 @@
                             }
                         },
 			{
-			    "section": "This tutorial has shown how to use the ACE Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes to discover details about what's deployed to an integration server."
+			    "section": "This tutorial has shown how to use the Java IBM Integration API's strategic com.ibm.integration.admin.proxy.* classes to discover details about what's deployed to an integration server."
 			}
                     ]
                 },
